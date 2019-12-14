@@ -1,12 +1,10 @@
 #include"Animal.h"
 
-static char *dog_str = "wang wang";
-
 typedef struct{
 	Animal animal;
-	char *dog;
+	char *dog_str;
 }Dog;
 
-Dog *new_dog(Animal *animal);
+Dog *new_dog(Animal *animal, char *dog_str);
 
 void I_am_a_dog(Dog *dog);
