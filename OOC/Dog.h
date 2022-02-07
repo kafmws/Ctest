@@ -1,10 +1,19 @@
+#ifndef _DOG_H_
+#define _DOG_H_
+
 #include"Animal.h"
 
-typedef struct{
-	Animal animal;
-	char *dog_str;
-}Dog;
+#define MACRO_Dog_VF \
+		MACRO_Animal_VF
 
-Dog *new_dog(Animal *animal, char *dog_str);
+#define MACRO_Dog_ATTRS \
+		MACRO_Animal_ATTRS\
+		char *dog_str;
 
-void I_am_a_dog(Dog *dog);
+EXTENDS(Dog, Animal)
+
+Dog *newDog(char* name, int age, char *dog_str);
+
+void testDog(Dog *dog);
+
+#endif
